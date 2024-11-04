@@ -1,0 +1,414 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #004080;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Navigation Toggle Button */
+#nav-toggle {
+    display: none; /* Hidden on larger screens */
+    background: #004080;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+header nav ul.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Section Styles */
+section {
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #004080;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.visible {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h2 {
+    color: #004080;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Contact Form Styles */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+#contact-form label {
+    font-weight: bold;
+    color: #004080;
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #004080;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #003366;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none; /* Hide navigation by default on smaller screens */
+        flex-direction: column;
+    }
+
+    #nav-toggle {
+        display: block; /* Show toggle button on smaller screens */
+    }
+
+    header nav ul.show {
+        display: flex; /* Show navigation when toggle button is clicked */
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
+    #contact-form label {
+        font-size: 0.9rem;
+    }
+}
+/* Admissions Page Styles */
+.admission-criteria, .application-process {
+    margin-top: 1.5rem;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.admission-criteria h3, .application-process h3 {
+    color: #004080;
+    margin-bottom: 0.5rem;
+}
+
+.admission-criteria ul, .application-process ol {
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+.admission-criteria ul li, .application-process ol li {
+    margin-bottom: 0.5rem;
+}
+
+.cta {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.apply-button {
+    padding: 0.7rem 1.5rem;
+    background-color: #004080;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.apply-button:hover {
+    background-color: #003366;
+}
+/* Apply Page Form Styles */
+#application-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#application-form label {
+    font-weight: bold;
+    color: #004080;
+    text-align: left;
+    width: 100%;
+}
+
+#application-form input, 
+#application-form select, 
+#application-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#application-form button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #004080;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#application-form button:hover {
+    background-color: #003366;
+}
+/* Programs Page Styling */
+.programs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.program {
+    background-color: #f4f4f9;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.program h3 {
+    color: #004080;
+    margin-bottom: 0.5rem;
+}
+
+.program p {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.program-apply-button {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: #004080;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.program-apply-button:hover {
+    background-color: #003366;
+}
+/* Main Section Styles */
+.intro {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e0f7fa;
+    margin-bottom: 2rem;
+}
+
+.intro h2 {
+    color: #004080;
+}
+
+.cta-button {
+    padding: 0.7rem 1.5rem;
+    background-color: #004080;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #003366;
+}
+
+/* Highlights Section */
+.highlights {
+    text-align: center; /* Center the section title */
+    padding: 2rem 0; /* Padding around the section */
+}
+
+.highlights-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-around; /* Space cards evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 1.5rem; /* Space between cards */
+    max-width: 900px; /* Limit maximum width */
+    margin: 0 auto; /* Center the container */
+}
+
+.highlight-card {
+    background-color: #f4f4f9;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 200px; /* Allow flexibility in card sizes */
+}
+
+.highlight-icon {
+    width: 50px; /* Set width of icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 1rem; /* Spacing below the icon */
+}
+
+.call-to-action {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff3e0;
+    margin-bottom: 2rem;
+}
+
+.call-to-action h2 {
+    color: #004080;
+}
